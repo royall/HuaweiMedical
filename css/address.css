@@ -1,0 +1,22 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/* Author: Yangz */
+/* Time: 2013/09/22 */
+
+.address_wrap { width: 248px; background: #efefef; }
+.address { width: 229px; margin-left: auto; margin-right: auto; }
+.as_photo { width: 47px; height: 47px; float: left; position: relative; margin-right: 14px; }
+.status_icon { display: block; width: 14px; height: 14px; position: absolute; bottom: -4px; right: -6px; }
+.status_1 { background: url(../images/icon04.png) no-repeat; }
+.status_2 { background: url(../images/icon08.png) no-repeat; }
+.status_3 { background: url(../images/icon09.png) no-repeat; }
+.address_list { font-size: 12px; color: #9e9e9e; }
+.as_name, .as_hospital, .as_ks { line-height: 100%; margin-bottom: 6px; width: 168px; float: left; }
+.as_name { color: #5b5b5b; }
+.as_ks { margin-bottom: 0; }
+.address_list li { height: 47px; padding: 16px 0; border-bottom: 1px solid #cfcfcf; cursor:pointer}
+.address_h2 { font-size: 16px; color: #736e6e; font-weight: normal; text-align: center; height: 34px; background: #d1d1d1; line-height: 34px; margin-bottom: 10px; }
+.address_search { border-radius: 15px; height: 26px; border: 1px solid #d9d9d9; background: #fff; }
+.as_txt { height: 26px; line-height: 26px; border: none; margin-left: 15px; width: 175px; float: left; display: block; margin-right: 5px; font-size: 12px; }
+.as_btn { width: 16px; height: 25px; background: url(../images/icon12.png) center 5px no-repeat; border: none; display: block; cursor: pointer; text-indent: -9999px; overflow: hidden; }
+.address_list{ height:790px; overflow:hidden; position:relative}

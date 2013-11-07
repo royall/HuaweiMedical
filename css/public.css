@@ -1,0 +1,48 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/* Author: Yangz */
+/* Time: 2013/09/22 */
+
+/*reset*/
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select { margin: 0; padding: 0 }
+input, button, textarea, select, optgroup, option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; color:inherit }
+table { border-collapse: collapse; border-spacing: 0; }
+ul, ol, li { list-style: none; }
+img { border: 0; vertical-align: middle }
+body { font: 14px/20px "Microsoft YaHei"; color: #5d5d5d }
+a { color: #5d5d5d; text-decoration: none }
+/* 框架 */
+.clearfix:after { content: "."; display: block; height: 0; visibility: hidden; clear: both; }
+.clearfix { *zoom:1;}
+:focus{ outline:none}
+.tl { text-align: left!important; }
+.tc { text-align: center!important; }
+.tr { text-align: right!important; }
+.fb { font-weight: bold; }
+.fn { font-weight: normal; }
+.fl { float: left; }
+.fr { float: right; }
+.undis { display: none }
+.dis { display: block }
+.ind { text-indent: 2em }
+.noborder { border: 0; }
+.fts12{ font-size:12px;}
+
+
+
+#header{ height:85px; background:#2aabd1; border-bottom:1px solid #397d91; color:#fff}
+#header a{ color:#fff}
+.header_r { float: right; margin-right: 35px; padding-top: 42px; }
+.info { display: inline-block; }
+.login_out { background: url(../images/icon05.png) left center no-repeat; padding-left: 25px; display: inline-block; margin-left: 35px; }
+.logo{ padding-left:40px; float:left;}
+.logo img{ display:block; float:left}
+.logo span{ color:#fff; font-size:18px; font-weight:normal; line-height:85px}
+#footer{height:45px; background:#3f4141; border-top:1px solid #a2abab; line-height:45px; color:#fff; font-size:12px; clear:both}
+.copyright{ float:left; padding-left:20px;}
+.links{ float:right; padding-right:40px;}
+.links a{ color:#fff}
+#body { height: 100%; overflow: hidden; }
+
+
+

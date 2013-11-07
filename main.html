@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>华为医疗</title>
+<link rel="stylesheet" type="text/css" href="css/public.css">
+<link rel="stylesheet" type="text/css" href="kendoui.complete.2013.2.716.trial/styles/kendo.common.min.css">
+<link rel="stylesheet" type="text/css" href="kendoui.complete.2013.2.716.trial/styles/kendo.default.min.css">
+<link rel="stylesheet" type="text/css" href="lib/css/literally.css">
+<link rel="stylesheet" type="text/css" href="css/address.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--<script src="kendoui.complete.2013.2.716.trial/js/jquery.min.js"></script>-->
+<script src="js/underscore-min.js"></script>
+<script src="js/jquery-2.0-min.js"></script>
+<script src="kendoui.complete.2013.2.716.trial/js/kendo.web.min.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/perfect-scrollbar.js"></script>
+<script src="js/search.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/sendmsg.js"></script>
+<script src="js/file.js"></script>
+<script src="js/main.js"></script>
+</head>
+
+<body>
+<div id="header">
+  <h1 class="logo"><img src="images/logo.png" width="80" height="64"><span>福田人民医院</span></h1>
+  <div class="header_r">
+    <div class="info"><img src="images/icon04.png" width="14" height="14" class="img_satus">&nbsp;您好，李小溪医生</div>
+    <a href="login.html" class="login_out">注销</a> </div>
+</div>
+<div id="body">
+  <div class="west">
+    <div class="west_top">
+      <div class="photo_wrap"><img src="images/photo20.jpg" width="50" height="44"><span class="status_icon status_1"></span></div>
+      <div class="photo_name">刘大力</div>
+      <a href="index.html" class="cancel">取消诊疗</a> </div>
+    <div class="west_tab">
+      <ul>
+        <li class="on"><a href="#" class="tab1"><span>基本信息</span><em></em></a></li>
+        <li><a href="#" class="tab2"><span>诊治单</span><em></em></a></li>
+        <li><a href="#" class="tab3"><span>实时监控</span><em></em></a></li>
+        <li><a href="#" class="tab4"><span>白板</span><em></em></a></li>
+        <li style="border-right:0"><a href="#" class="tab5"><span>文件库</span><em></em></a></li>
+      </ul>
+    </div>
+    <div class="west_content">
+      <div class="content_box" style="display:block">
+        <div class="base_info">
+          <div class="info_time">预约时间：08：30—09:00</div>
+          <div class="info_title"><span>基本信息</span></div>
+          <div class="info_table">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="24">姓名：刘大力</td>
+                <td height="24">年龄：31岁</td>
+              </tr>
+              <tr>
+                <td height="24">性别：男</td>
+                <td height="24">既有病史：无</td>
+              </tr>
+              <tr>
+                <td height="24">是否已婚：否</td>
+                <td height="24">药物过敏：无</td>
+              </tr>
+              <tr>
+                <td height="24">电话号码：15896563325</td>
+                <td height="24">email：liudali@163.com</td>
+              </tr>
+            </table>
+          </div>
+          <div class="info_title"><span>病情概要</span></div>
+          <div class="info_des">发烧两天,喉咙疼痛,流鼻涕,打喷嚏</div>
+        </div>
+      </div>
+      <div class="content_box">
+        <div class="cure">
+          <div class="cure_txt">
+            <div class="tool_bar"><img src="images/toolbar.png" width="583" height="25"/></div>
+            <div class="main_txt">
+              <div class="input_w"><strong>主诉：</strong>
+                <input type="text" class="iw_input">
+              </div>
+              <div class="input_w"><strong>诊断：</strong>
+                <input type="text" class="iw_input">
+              </div>
+              <div class="input_w"><strong>分析：</strong>
+                <input type="text" class="iw_input">
+              </div>
+              <div class="input_w input_w2">临床措施：<br>
+                <textarea class="iw_input2"></textarea>
+              </div>
+              <div class="elec_s" style="position:relative"><strong>电子签名：</strong>
+                <div class="elec_txt">
+                  <canvas width="115" height="65" id="canvas" style="background:#F7F7F7;" ></canvas>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <a href="#" class="cure_btn">提交</a> </div>
+      </div>
+      <div class="content_box">
+        <div class="monitor">
+          <div class="monitor_no" style="display:none">病人未开通实时监控业务</div>
+          <div class="monitor_has">
+            <div class="monitor_wrap">
+              <div class="monitor_box">
+                <h2>脉搏</h2>
+                <div class="monitor_content"><img src="images/pic1.jpg" width="555" height="261"></div>
+              </div>
+              <div class="monitor_box">
+                <h2>血压</h2>
+                <div class="monitor_content"><img src="images/pic2.jpg" width="555" height="261"></div>
+              </div>
+              <div class="monitor_box">
+                <h2>心电</h2>
+                <div class="monitor_content"><img src="images/pic1.jpg" width="555" height="261"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content_box">
+        <div class="whiteboard">
+          <div class="literally" style="width:582px; height:695px;">
+            <canvas id="cans"></canvas>
+          </div>
+          
+        </div>
+      </div>
+      <script src="lib/literallycanvas.js"></script> 
+      
+      <div class="content_box">
+        <div class="file_room"> <a href="#">打开服务器图片</a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="east">
+    <div class="east_top" id="target">
+      <div class="map">
+        <div class="map_img"><img src="images/map.jpg" width="1059" height="694"></div>
+        <div class="point point1" id="point1"></div>
+        <div class="point point1" id="point2"></div>
+        <div class="point point2" id="point3"></div>
+        <div class="point point3" id="point4"></div>
+        <div class="point_tips point_tips_2" id="pt1">
+          <h2><em>&nbsp;</em>救护车</h2>
+          <div class="pt_content">
+            <div class="pt_txt">地址：深圳市福田区彩田1路9号街道</div>
+            <div class="pt_txt2"><a href="#" class="emergency_call">紧急呼叫</a></div>
+          </div>
+          <em class="arrow"></em></div>
+        <div class="point_tips point_tips_2" id="pt2">
+          <h2><em>&nbsp;</em>救护车</h2>
+          <div class="pt_content">
+            <div class="pt_txt">地址：深圳市福田区彩田1路9号街道</div>
+            <div class="pt_txt2"><a href="#" class="emergency_call">紧急呼叫</a></div>
+          </div>
+          <em class="arrow"></em></div>
+        <div class="point_tips point_tips_1" id="pt3">
+          <h2><em>&nbsp;</em>病人信息</h2>
+          <div class="pt_content">
+            <div class="pt_txt">地址：深圳市福田区彩田1路9号街道</div>
+          </div>
+          <em class="arrow"></em></div>
+        <div class="point_tips point_tips_1" id="pt4">
+          <h2><em>&nbsp;</em>医院信息</h2>
+          <div class="pt_content">
+            <div class="pt_txt">地址：深圳市福田区彩田1路9号街道</div>
+          </div>
+          <em class="arrow"></em></div>
+      </div>
+      <div class="video"><img src="images/videoimg.jpg" width="1059" height="694"></div>
+      <div class="small_window">
+        <div class="small_box" id="doctor"><img src="images/photo21.jpg" width="143" height="96"></div>
+        <div class="small_box" id="map_small"><img src="images/map-s.jpg" width="143" height="96"></div>
+        <div class="small_box" id="photo_self"><img src="images/photo22.jpg" width="143" height="96"></div>
+      </div>
+      <div class="tips">
+        <div class="tips_box" style="display:block"> <span class="tips_icon"><em class="tips_icon1">&nbsp;</em></span><span class="tips_txt">正在等待病人加入诊疗．．．</span> </div>
+        <div class="tips_box" id="tips_yq"> <span class="tips_icon"><em class="tips_icon1">&nbsp;</em></span><span class="tips_txt">正在等待<strong>xxx、xxx、xxx</strong>接收邀请</span></div>
+        <div class="tips_box"> <span class="tips_icon"><em class="tips_icon1">&nbsp;</em></span><span class="tips_txt">正在与xxx、xxx、xxx建立连接</span></div>
+        <div class="tips_box" id="tips_time"> <span class="tips_icon"><em class="tips_icon4">&nbsp;</em></span><a href="javascript:;" class="record_btn">&nbsp;</a>
+          <div class="tips_box2"> <a href="#" class="tips_icon3" id="btn_close">&nbsp;</a> <span class="tips_time">00:00</span> </div>
+        </div>
+        <div class="tips_box"> <span class="tips_icon"><em class="tips_icon2">&nbsp;</em></span><span class="tips_txt">对方拒绝了视频通话</span> </div>
+        <div class="tips_box"> <span class="tips_icon"><em class="tips_icon2">&nbsp;</em></span><span class="tips_txt">您拒绝了视频通话</span></div>
+      </div>
+    </div>
+    <div class="east_bottom">
+      <div class="down_more"></div>
+      <div class="chat_list">
+        <div class="chat_list_w">
+          <ul>
+            <li class="more_msg">查看更多历史记录</li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li>
+              <div class="chat_photo"><img src="images/photo17.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，请问你哪里不舒服？</span></div>
+            </li>
+            <li class="chat_opp">
+              <div class="chat_photo"><img src="images/photo10.jpg" width="34" height="34"></div>
+              <div class="chat_msg"><em></em><span>您好，我最近发烧而且喉咙疼痛,流鼻涕,打喷嚏</span></div>
+            </li>
+            <li class="history_msg">以上是历史消息</li>
+          </ul>
+        </div>
+      </div>
+      <div class="chat_bottom"> <a href="javascript:;" class="file"></a>
+        <input type="file" class="file_input">
+        <div class="chat_input">
+          <input type="text" class="chat_txt">
+        </div>
+        <a href="javascript:;" class="chat_send">发送</a> </div>
+    </div>
+  </div>
+  <div class="side_address">
+    <div class="sidebar"></div>
+    <div class="address_wrap">
+      <h2 class="address_h2">通讯录</h2>
+      <div class="address">
+        <div class="address_search">
+          <input type="text" placeholder="搜索栏：请输入病人的姓名" class="as_txt">
+          <input type="submit" class="as_btn" value="search">
+        </div>
+        <div class="address_list">
+          <ul>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo2.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：吴瑾</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo3.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：李成</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo4.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：赵化</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo5.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：吴斌</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo6.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：橘子</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo7.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：草莓</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo8.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：微笑</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo9.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：微笑1</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo2.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：吴瑾</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo3.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：李成</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo4.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：赵化</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo5.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：吴斌</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo6.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：橘子</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo7.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：草莓</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo8.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：微笑</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+            <li draggable="true">
+              <div class="as_photo"><img src="images/photo9.jpg" width="47" height="47" draggable="true"><span class="status_icon status_1"></span></div>
+              <div class="as_name">姓名：微笑1</div>
+              <div class="as_hospital">医院：深圳中医院</div>
+              <div class="as_ks">科室：老年综合门诊</div>
+              <a href="javascript:;" class="invite">邀请<br>
+              诊疗</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="copyright"> 版权所有 &copy;  华为技术有限公司 2013. 保留一切权利</div>
+  <div class="links"><a href="#">问题反馈</a>&nbsp;|&nbsp;<a href="#">网站地图</a>&nbsp;|&nbsp;<a href="#">W3论坛</a>&nbsp;|&nbsp;<a href="#">帮助中心</a></div>
+</div>
+</body>
+</html>

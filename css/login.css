@@ -1,0 +1,24 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/* Author: Yangz */
+/* Time: 2013/09/22 */
+
+.login { height: 918px; background: url(../images/loginbg.jpg) center center; position: relative; width: 100%; }
+#footer { position: fixed; bottom: 0; width: 100% }
+.login_box { width: 610px; height: 370px; background: url(../images/loginbox.png) no-repeat; position: absolute; left: 50%; top: 50%; margin-left: -305px; margin-top: -185px; }
+.login_box h2 { height: 60px; line-height: 60px; font-size: 20px; color: #004e7b; font-weight: normal; margin-top: 20px; padding-left: 90px }
+.login_table { margin-left: 90px; padding-top: 27px; position: relative; margin-bottom: 45px; }
+.login_txt { width: 231px; height: 25px; background: url(../images/logintxt.png) no-repeat; border: none; padding: 0 3px; line-height: 25px; }
+.login_role { width: 50px; font-size: 12px; background: url(../images/icon01.png) right center no-repeat; float: left; color: #3ba8c9; text-indent: 5px; position: relative; cursor: pointer }
+.login_role ul { position: absolute; background: #f4f6f6; border: 1px solid #90c1dd; left: -3px; top: 24px; width: 50px; display: none }
+.login_role ul li { cursor: pointer; }
+.login_role ul li:hover { background: #fff }
+.login_id { float: left; display: block; margin-left: 10px; height: 23px; line-height: 23px; border: none; margin-top: 1px; width: 170px; background: none }
+.reg_btn { display: block; width: 238px; height: 32px; color: #fff; text-align: center; line-height: 32px; background: url(../images/regbtn.png) no-repeat }
+.get_pswd { text-decoration: underline; font-size: 12px; color: #3ba8c9 }
+.reg_link { font-size: 12px; color: #3ba8c9 }
+.login_btn { width: 80px; height: 80px; line-height: 80px; text-align: center; color: #fff; font-size: 18px; position: absolute; background: none; right: 20px; top: 70px; cursor: pointer; border: none }
+.cop_login { text-align: center; height: 16px; line-height: 16px }
+.cop_login a { text-indent: 27px; display: inline-block }
+.cop_link1 { background: url(../images/icon02.png) left center no-repeat; border-right: 1px solid #d3d3d3; padding-right: 10px }
+.cop_link2 { background: url(../images/icon03.png) 10px center no-repeat; border-left: 1px solid #fcfdfd; padding-left: 10px }

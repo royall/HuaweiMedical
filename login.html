@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登录</title>
+<link rel="stylesheet" type="text/css" href="css/public.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<script src="kendoui.complete.2013.2.716.trial/js/jquery.min.js"></script>
+<script src="js/login.js"></script>
+</head>
+
+<body>
+<div id="header">
+  <h1 class="logo"><img src="images/logo.png" width="80" height="64"><span>华为远程医疗</span></h1>
+</div>
+<div id="body">
+  <div class="login">
+    <div class="login_box">
+      <h2>用户登录</h2>
+      <div class="login_table">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="75" height="25">用户账号：</td>
+            <td><div class="login_txt">
+                <div class="login_role"><span>医生</span>                
+                    <ul>
+                        <li>医生</li>
+                        <li>管理员</li>
+                    </ul>                
+                </div>
+                <input type="text" class="login_id">
+              </div></td>
+          </tr>
+          <tr>
+            <td height="29">&nbsp;</td>
+            <td><span class="fts12">还没有账号？<a href="#" class="reg_link">立即注册</a></span></td>
+          </tr>
+          <tr>
+            <td height="25">密       码：</td>
+            <td><input type="password" class="login_txt">
+              <a href="#" class="get_pswd">忘记密码？</a></td>
+          </tr>
+          <tr>
+            <td height="40">&nbsp;</td>
+            <td><span class="fts12">
+              <input type="checkbox" id="remember" style="vertical-align:middle">
+              <label for="remember">下次自动登录</label>
+              </span></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><a href="#" class="reg_btn">立即注册</a></td>
+          </tr>
+        </table>
+        <form action="index.html">
+          <input type="submit" value="登录" class="login_btn">
+        </form>
+      </div>
+      <div class="cop_login">可用以下账户登录:&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="cop_link1">微薄登录</a><a href="#" class="cop_link2">Gmail登录</a> </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="copyright"> 版权所有 &copy;  华为技术有限公司 2013. 保留一切权利</div>
+  <div class="links"><a href="#">问题反馈</a>&nbsp;|&nbsp;<a href="#">网站地图</a>&nbsp;|&nbsp;<a href="#">W3论坛</a>&nbsp;|&nbsp;<a href="#">帮助中心</a></div>
+</div>
+</body>
+</html>

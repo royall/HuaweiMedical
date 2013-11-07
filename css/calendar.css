@@ -1,0 +1,31 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+
+
+#calendar { width: 240px; font-family: Arail; font-size: 12px; border: none; background: none; }
+
+
+.k-today .k-link { background: #28a5cb!important; color: #fff; }
+
+.k-header { background: #3f4141; color: #fff; border-top-left-radius: 2px; border-top-right-radius: 2px; }
+
+.k-calendar .k-link.k-nav-fast { color: #fff; font-size: 14px;  }
+
+.k-calendar .k-content { text-align: center; }
+.k-calendar .k-content .k-link { line-height: 32px; }
+.k-calendar .k-content .k-link { padding: 0; line-height: 24px; }
+.k-calendar th { border: none; }
+
+.k-nav-prev { background: url(../images/icon29.png) center center no-repeat; }
+.k-nav-prev.k-state-hover { background: url(../images/icon29.png) center center no-repeat; }
+
+.k-nav-next { background: url(../images/icon30.png) center center no-repeat; }
+.k-nav-next.k-state-hover { background: url(../images/icon30.png) center center no-repeat; }
+
+.k-calendar td { padding: 5px; }
+
+
+.k-state-selected .k-link { background: url(../images/icon31.png) no-repeat; }
+.k-other-month a { color: #7f7e7e; }
