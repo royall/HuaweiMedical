@@ -72,7 +72,7 @@
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  background-color: #969696; }
+  background-color: #969696; z-index:10000}
 
 .colorpicker div {
   position: relative; }
@@ -129,7 +129,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: gainsboro; }
+    background-color: #f4f4f4; }
 	
 	
     .literally .toolbar, .literally .toolbar * {
@@ -280,5 +280,11 @@
       .literally .button-group .button:last-child {
         border-radius: 0px 5px 5px 0px; }
 
-/*
-.literally .tool-line,.literally .tool-rectangle,.literally .tool-eye-dropper,.literally  .clear-button,.secondary-picker,.literally .undo-button,.literally .redo-button{ display:none}*/
+
+.literally .tool-line,.literally .tool-rectangle,.literally .tool-eye-dropper,.literally  .clear-button,.secondary-picker,.literally .undo-button,.literally .redo-button{ display:none}
+
+
+.zoom_btn{ width:20px; height:20px; background:url(../../images/icon50.png) no-repeat; position:absolute; left:97px; cursor:pointer; top:6px; z-index:100;}
+
+
+#body .whiteboard_b{position:absolute;left:0;	top:0;height:917px; z-index:9999}

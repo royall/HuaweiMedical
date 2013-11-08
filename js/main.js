@@ -27,15 +27,15 @@ $(function () {
         if (index == 2) {
             $(".monitor_has").perfectScrollbar('update');
         }		
-		if(index==3&&$(".whiteboard .toolbar").length<=0){
-			
-			$('.literally').literallycanvas();		
-				
+		if(index==3&&$(".whiteboard .toolbar").length<=0){			
+			$('.literally').literallycanvas();
 			$(window).resize();
 			}
-		
+		$(window).resize();
         return false;
     });
+
+
 
     /*侧边通讯录*/
     $(".sidebar").click(function () {
@@ -150,7 +150,7 @@ $(function () {
 
     var s1 = 0;
     $(".address_list li").click(function () {
-        if ($(".small_window .small_box:visible").length < 3) {
+      //  if ($(".small_window .small_box:visible").length < 3) {
             var name = $(this).find(".as_name").text();
             var name2 = name.substring(3, name.length)
             $("#tips_yq strong").text(name2);
@@ -165,7 +165,7 @@ $(function () {
             }, 3000);
 
 
-        }
+      //  }
 
 
     });
@@ -202,7 +202,7 @@ $(function () {
     eleDustbin.ondrop = function (ev) {
         if (eleDrag) {
 
-            if ($(".small_window .small_box:visible").length < 3) {
+           // if ($(".small_window .small_box:visible").length < 3) {
                 var p = $(eleDrag).parents("li");
                 var name = p.find(".as_name").text();
 
@@ -217,7 +217,7 @@ $(function () {
                     $("#tips_time").show();
                     $("#doctor").show();
                 }, 3000)
-            }
+           // }
         }
 
         return false;
@@ -225,7 +225,7 @@ $(function () {
 	
 /*录制视频*/
 $(".record_btn").click(function(){	
-	$(this).toggleClass("on");
+	$(this).toggleClass("on");	
 	});
 	
 
@@ -309,6 +309,36 @@ Draw.prototype = {
 };
 var draw = new Draw('canvas');
 
+		var canvas=document.getElementById("cans");
+		var cx=canvas.getContext("2d");
+        var img= new Image();
+       img.src="images/pian.jpg";
+      cx.drawImage(img,0,0);
+
 //$('.literally').literallycanvas();	
+
+
+$(".zoom_btn").click(function(){
+	$whiteboard=$(".whiteboard");	
+	var p=$(this).parents(".content_box");	
+	if($(this).hasClass("on")){				
+		$(this).removeClass("on");				
+		$whiteboard.removeClass("whiteboard_b").width(633);		
+		$whiteboard.appendTo(".content_box:eq(3)");		
+		$(".literally").width(582).height(695);		
+		$whiteboard.find("canvas").attr("width",582).attr("height",633);			
+	}else{		
+			$(this).addClass("on");				
+			$("#body").css("position","relative");						
+			$whiteboard.appendTo("#body").addClass("whiteboard_b").width($(window).width());				
+			$(".literally").width($(window).width()).height(917);					
+			$whiteboard.find("canvas").attr("width",$(window).width()).attr("height",917);		
+		
+		}	
+	$(window).resize();	
+	});
+
+
+
 
 })
